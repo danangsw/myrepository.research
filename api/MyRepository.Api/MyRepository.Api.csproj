@@ -58,21 +58,21 @@
     <Compile Include="FmxRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\core\MyRepository.InMemory.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\sources\core\MyRepository.InMemory.csproj">
       <Project>{8464bf9e-b86e-4df0-a5d8-412326750579}</Project>
       <Name>MyRepository.InMemory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ioc\MyRepository.Autofac\MyRepository.Ninject.csproj">
+    <ProjectReference Include="..\..\sources\ioc\MyRepository.Ninject\MyRepository.Ninject.csproj">
       <Project>{affc4898-ff1f-4107-a72a-df1afcdcca34}</Project>
       <Name>MyRepository.Ninject</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\shared\MyRepository.csproj">
+    <ProjectReference Include="..\..\sources\shared\MyRepository.csproj">
       <Project>{4474badc-f1e2-4bc8-9f7c-c564e5cea737}</Project>
       <Name>MyRepository</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
